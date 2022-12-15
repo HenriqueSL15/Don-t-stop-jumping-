@@ -9,3 +9,7 @@ maxSpdFall = 16;
 
 jumpHeight =64;
 jumpFrames = 0;
+
+ladder = false;
+
+falling = false;
