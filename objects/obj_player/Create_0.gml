@@ -3,7 +3,14 @@
 spd = 4;
 jump = false;
 
-grvt = 0.2;
+running = false;
+
+
+hsp = 0;
+vsp = 0;
+grvt = 0.3;
+walksp = 4;
+
 spdFall = 2;
 maxSpdFall = 16;
 

@@ -5,12 +5,14 @@
 if(place_free(x,y+spd)){
 
 	y+=spd;	
-
+	
+	
 	
 	if(place_meeting(x,y,obj_d3ath)){
 		room_restart();
 	}
 }
+
 
 //END OF GRAVITY AND AUTO KILL SYSTEM
 
@@ -23,6 +25,9 @@ if(keyboard_check(ord("D") )){
 	if(!place_meeting(x+4,y,obj_block)){
 		x+=spd;
 		image_xscale = 1;
+		sprite_index = spr_playerR;
+	}else{
+		sprite_index = spr_player;	
 	}
 	
 }else{
@@ -30,13 +35,16 @@ if(keyboard_check(ord("D") )){
 		if(!place_meeting(x-4,y,obj_block)){
 		x-=spd;
 		image_xscale = -1;
+		sprite_index = spr_playerR;
 	}
 		
+	}else{
+		sprite_index = spr_player;	
 	}	
 }
 
 if(place_meeting(x+1,y,obj_stair)){
-	y-=4;
+	y-=spd;
 }
 	
 if(keyboard_check(vk_space)){
@@ -124,13 +132,21 @@ END OF LADDER FALLING SYSTEM */
 if(jump){
 	if(jumpFrames < jumpHeight){
 		if(!place_meeting(x,y-spd,obj_block)){
+			
 			jumpFrames+=spd;
-			y-=spd*2;
+			y-=spd*2
+			sprite_index = spr_playerJ;
+			image_index = 0;
+			
+			
 		}else{
+		
 			jump = false;	
 			jumpFrames = 0;
+			
 		}
 	}else{
+		
 		jump = false;	
 		jumpFrames = 0;
 	}
