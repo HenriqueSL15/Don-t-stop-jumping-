@@ -16,7 +16,19 @@ if(place_free(x,y+spd)){
 
 //END OF GRAVITY AND AUTO KILL SYSTEM
 
+//BEGIN PORTAL SYSTEM
 
+if(place_meeting(x+1,y,obj_portal1) || place_meeting(x-1,y,obj_portal1)){
+	obj_player.x = portal2x-32;
+	obj_player.y = portal2y;
+}else{
+	if(place_meeting(x+1,y,obj_portal2) || place_meeting(x-1,y,obj_portal2)){
+	obj_player.x = portal1x+64;
+	obj_player.y = portal1y;
+}
+}
+
+//END PORTAL SYSTEM
 
 //BEGIN SUPER JUMP BLOCK SYSTEM
 if(place_meeting(x,y+spd,obj_JumpBlock)){
