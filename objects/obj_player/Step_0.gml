@@ -18,6 +18,40 @@ if(place_free(x,y+spd)){
 
 
 
+//BEGIN SUPER JUMP BLOCK SYSTEM
+if(place_meeting(x,y+spd,obj_JumpBlock)){
+	if(keyboard_check(vk_space)){
+		SuperJump = true;
+	}
+}
+
+
+if(SuperJump){
+	if(jumpFrames < SuperJumpHeight){
+		if(!place_meeting(x,y-spd,obj_block)){
+			
+			jumpFrames+=spd;
+			y-=spd*2
+			sprite_index = spr_playerJ;
+			image_index = 0;
+			
+			
+		}else{
+		
+			SuperJump = false;	
+			jumpFrames = 0;
+			
+		}
+	}else{
+		
+		SuperJump = false;	
+		jumpFrames = 0;
+	}
+}
+//END OF SUPER JUMP BLOCK SYSTEM
+
+
+
 
 //BEGIN OF MOVEMENT SYSTEM AND STAIRS
 
@@ -29,6 +63,9 @@ if(keyboard_check(ord("D") )){
 	}else{
 		sprite_index = spr_player;	
 	}
+	
+		
+	
 	
 }else{
 	if(keyboard_check(ord("A") )){

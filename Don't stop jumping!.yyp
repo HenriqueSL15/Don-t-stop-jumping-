@@ -4,8 +4,10 @@
   "name": "Don't stop jumping!",
   "resources": [
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
+    {"id":{"name":"spr_JumpBlock","path":"sprites/spr_JumpBlock/spr_JumpBlock.yy",},"order":8,},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":0,},
     {"id":{"name":"obj_stair","path":"objects/obj_stair/obj_stair.yy",},"order":3,},
+    {"id":{"name":"obj_JumpBlock","path":"objects/obj_JumpBlock/obj_JumpBlock.yy",},"order":5,},
     {"id":{"name":"obj_d3ath","path":"objects/obj_d3ath/obj_d3ath.yy",},"order":2,},
     {"id":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"order":1,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":1,},
