@@ -3,6 +3,8 @@
 spd = 4;
 jump = false;
 
+playable = false;
+
 running = false;
 
 SuperJump = false;
