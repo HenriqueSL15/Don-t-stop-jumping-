@@ -10,7 +10,7 @@ if(place_free(x,y+spd)){
 	
 	
 	
-	if(place_meeting(x,y,obj_d3ath)){
+	if(place_meeting(x+1,y+1,obj_d3ath)){
 		room_restart();
 	}
 }
@@ -40,7 +40,7 @@ if(place_meeting(x,y+spd,obj_JumpBlock)){
 }
 
 
-if(SuperJump){
+if(SuperJump && !place_meeting(x,y,obj_ladder)){
 	if(jumpFrames < SuperJumpHeight){
 		if(!place_meeting(x,y-spd,obj_block)){
 			

@@ -9,7 +9,9 @@ var gui_altura = display_get_gui_height();
 var x1 = gui_largura/2;
 var y1 = gui_altura/2;
 if(opacity == 0){
-	
+	draw_set_color(c_black);
+	draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),0);
+
 for(var i =0;i < op_max;i++){
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_center);
