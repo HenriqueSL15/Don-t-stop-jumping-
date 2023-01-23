@@ -86,7 +86,10 @@ if(place_meeting(x,y+spd,obj_JumpBlock)){
 
 if(SuperJump && !place_meeting(x,y,obj_ladder)){
 		
-				y-=1;
+				if(!place_meeting(x,y-spd,obj_baseBlock)){
+					y-=1;
+				}
+				
 				sprite_index = spr_playerJ;
 				image_index = 0;
 				
