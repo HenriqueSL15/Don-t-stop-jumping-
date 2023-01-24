@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 time = 0;
-spd = 2;
+spd = 3;
 jump = false;
 
 playable = false;

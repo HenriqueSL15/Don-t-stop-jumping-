@@ -87,7 +87,7 @@ if(place_meeting(x,y+spd,obj_JumpBlock)){
 if(SuperJump && !place_meeting(x,y,obj_ladder)){
 		
 				if(!place_meeting(x,y-spd,obj_baseBlock)){
-					y-=1;
+					y-=2;
 				}
 				
 				sprite_index = spr_playerJ;
@@ -96,7 +96,7 @@ if(SuperJump && !place_meeting(x,y,obj_ladder)){
 				if(SuperJump){
 					time+=0.1;
 					show_debug_message(time);
-					if(time == 24){
+					if(time == 12){
 						SuperJump = false;
 						time = 0;
 					}
