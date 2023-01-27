@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_dirt",
+  "name": "obj_baseDirt",
   "spriteId": {
-    "name": "spr_dirt",
-    "path": "sprites/spr_dirt/spr_dirt.yy",
+    "name": "spr_baseDirt",
+    "path": "sprites/spr_baseDirt/spr_baseDirt.yy",
   },
   "solid": true,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_block",
-    "path": "objects/obj_block/obj_block.yy",
+    "name": "obj_baseBlock",
+    "path": "objects/obj_baseBlock/obj_baseBlock.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
