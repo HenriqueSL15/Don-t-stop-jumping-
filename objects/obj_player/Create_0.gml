@@ -4,6 +4,9 @@ time = 0;
 spd = 3;
 jump = false;
 
+
+
+
 playable = false;
 
 running = false;

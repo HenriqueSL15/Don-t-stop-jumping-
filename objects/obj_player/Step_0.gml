@@ -79,6 +79,7 @@ if(place_meeting(x+1,y,obj_portal1) || place_meeting(x-1,y,obj_portal1)){
 //BEGIN SUPER JUMP BLOCK SYSTEM
 if(place_meeting(x,y+spd,obj_JumpBlock)){
 	if(keyboard_check(vk_space)){
+		audio_play_sound(snd_jump,1,false);
 		SuperJump = true;
 	}
 }
@@ -111,8 +112,11 @@ if(SuperJump && !place_meeting(x,y,obj_ladder)){
 
 //BEGIN OF MOVEMENT SYSTEM AND STAIRS
 
-if(key_right){
+if(keyboard_check(ord("D"))){
+	
 	if(!place_meeting(x+4,y,obj_block) &&  !place_meeting(x+4,y,obj_baseBlock)){
+			
+		
 		x = x + hsp;
 		image_xscale = 1;
 		sprite_index = spr_playerR;
@@ -124,7 +128,11 @@ if(key_right){
 	
 	
 }else{
-	if(key_left){
+	
+	
+	if(keyboard_check(ord("A"))){
+		
+		
 		if(!place_meeting(x-4,y,obj_block) &&   !place_meeting(x-4,y,obj_baseBlock)){
 		x = x + hsp;
 		image_xscale = -1;
@@ -133,7 +141,9 @@ if(key_right){
 		
 	}else{
 		sprite_index = spr_player;	
+		
 	}	
+	
 }
 
 if(place_meeting(x+hsp,y,obj_stair)){
@@ -142,15 +152,18 @@ if(place_meeting(x+hsp,y,obj_stair)){
 	
 if(keyboard_check(vk_space)){
 	if(!place_free(x,y+1)){
+		audio_play_sound(snd_jump,1,false);
 		vsp = -7;
 	}
 	
 	if(place_meeting(x,y+spd,obj_ladder)){
+		audio_play_sound(snd_jump,1,false);
 		vsp = -7;
 	}
 	
 	
 	if(place_meeting(x+spd,y+spd,obj_stair)){
+		audio_play_sound(snd_jump,1,false);
 		vsp = -7;	
 	}
 }	
