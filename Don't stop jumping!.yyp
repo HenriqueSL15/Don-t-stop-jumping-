@@ -6,6 +6,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_JumpBlock","path":"sprites/spr_JumpBlock/spr_JumpBlock.yy",},"order":8,},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":0,},
+    {"id":{"name":"snd_backgroundMusic","path":"sounds/snd_backgroundMusic/snd_backgroundMusic.yy",},"order":3,},
     {"id":{"name":"spr_baseBlock","path":"sprites/spr_baseBlock/spr_baseBlock.yy",},"order":11,},
     {"id":{"name":"spr_baseDirt","path":"sprites/spr_baseDirt/spr_baseDirt.yy",},"order":14,},
     {"id":{"name":"obj_stair","path":"objects/obj_stair/obj_stair.yy",},"order":6,},

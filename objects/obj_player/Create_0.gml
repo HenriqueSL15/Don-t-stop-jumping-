@@ -1,10 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+b = 0;
+
+died = 0;
+
 time = 0;
 spd = 3;
 jump = false;
 
-
+moving = false;
 
 
 playable = false;

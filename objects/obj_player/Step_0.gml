@@ -13,6 +13,16 @@ vsp = vsp + grv;
 
 
 if(playable){
+	
+	if(died == 0){
+		audio_play_sound(snd_backgroundMusic,1000,true);
+		died+=1;
+	}else if(died > 0){
+		
+	}
+	
+
+
 
 /// @description Insert description here
 // You can write your code in this editor
@@ -21,10 +31,22 @@ if(playable){
 if(place_meeting(x+hsp,y,obj_block)){
 	while(!place_meeting(x+sign(hsp),y,obj_block)){
 		x = x + sign(hsp);
+		
+		
 	}
+	
 	hsp = 0;
 }
+
 x = x + sign(hsp);
+
+
+
+if(place_meeting(x,y,obj_d3ath)){
+		audio_stop_sound(snd_backgroundMusic)
+		room_restart();
+
+}
 
 
 	
@@ -42,9 +64,7 @@ if(place_meeting(x,y+vsp,obj_block)){
 	
 	
 	
-	if(place_meeting(x,y,obj_d3ath)){
-		room_restart();
-	}
+	
 }
 
 if(!place_meeting(x,y+2,obj_ladder) && !place_meeting(x,y,obj_block) && !place_meeting(x,y,obj_stair) && SuperJump == false &&  !place_meeting(x,y,obj_baseBlock)){
@@ -150,22 +170,24 @@ if(place_meeting(x+hsp,y,obj_stair)){
 	y-=4;
 }
 	
-if(keyboard_check(vk_space)){
-	if(!place_free(x,y+1)){
-		audio_play_sound(snd_jump,1,false);
-		vsp = -7;
-	}
+if(keyboard_check(vk_space) && !place_meeting(x,y,obj_ladder)){
 	
-	if(place_meeting(x,y+spd,obj_ladder)){
-		audio_play_sound(snd_jump,1,false);
-		vsp = -7;
-	}
+		if(!place_free(x,y+1)){
+			audio_play_sound(snd_jump,1,false);
+			vsp = -7;
+		}
+	
+		if(place_meeting(x,y+spd,obj_ladder)){
+			audio_play_sound(snd_jump,1,false);
+			vsp = -7;
+		}
 	
 	
-	if(place_meeting(x+spd,y+spd,obj_stair)){
-		audio_play_sound(snd_jump,1,false);
-		vsp = -7;	
-	}
+		if(place_meeting(x+spd,y+spd,obj_stair)){
+			audio_play_sound(snd_jump,1,false);
+			vsp = -7;	
+		}
+	
 }	
 // END OF MOVEMENT AND STAIRS SYSTEM
 

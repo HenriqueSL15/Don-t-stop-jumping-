@@ -6,7 +6,7 @@
     "name": "spr_d3ath",
     "path": "sprites/spr_d3ath/spr_d3ath.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
