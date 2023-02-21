@@ -1,21 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
+won = false;
 
+goingUp = false;
 
-b = 0;
 
 died = 0;
 
 time = 0;
 spd = 3;
-jump = false;
 
-moving = false;
 
+acidSpd = 0.75;
 
 playable = false;
 
-running = false;
+
 SuperJump = false;
 
 portal1x = obj_portal1.x;
@@ -27,12 +27,11 @@ portal2y = obj_portal2.y;
 hsp = 0;
 vsp = 0;
 grv = 0.3;
-walksp = 4;
 
-jumpHeight =64;
-jumpFrames = 0;
+
+
 
 ladder = false;
 
-falling = false;
+
 

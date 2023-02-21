@@ -8,7 +8,7 @@ if(index == 0){
 	
 	iniciated = 1;
 	
-}else if(index == 3){
+}else if(index == 2)
 	game_end();
 }else if(index == 1){
 	obj_player.playable = true;
@@ -22,6 +22,5 @@ if(index == 0){
 	
 		ini_close();
 	
-}
 }
 }

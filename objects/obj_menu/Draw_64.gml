@@ -26,3 +26,11 @@ for(var i =0;i < op_max;i++){
 }
 draw_set_font(ft_menu);
 
+if(obj_player.won){
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_center);
+	
+	draw_set_font(ft_menu);
+	draw_text(x1,y1,"PARABÉNS, VOCÊ TERMINOU O JOGO :D");
+}
+
