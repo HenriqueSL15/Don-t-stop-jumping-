@@ -38,8 +38,7 @@ if(playable){
 
 
 
-/// @description Insert description here
-// You can write your code in this editor
+
 
 //BEGIN OF GRAVITY AND AUTO KILL SYSTEM
 if(place_meeting(x+hsp,y,obj_block)){
